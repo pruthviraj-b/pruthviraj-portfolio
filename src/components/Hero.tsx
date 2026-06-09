@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Mail, MapPin } from "lucide-react";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
-import { siteConfig } from "@/lib/data";
+import { siteConfig, basePath } from "@/lib/data";
 import { useEffect, useState } from "react";
 
 const roles = [
@@ -122,7 +122,7 @@ export default function Hero() {
                 VIEW PROJECTS ↓
               </a>
               <a
-                href="/resume.pdf"
+                href={basePath + "/resume.pdf"}
                 download="Pruthvi_Raj_B_Resume.pdf"
                 className="px-6 py-3 text-lg bg-white text-retro-black border-[3px] border-retro-black shadow-brutal hover:translate-y-[4px] hover:translate-x-[4px] hover:shadow-none transition-all flex items-center gap-2"
               >
@@ -170,7 +170,7 @@ export default function Hero() {
             <div className="relative group">
               <div className="relative w-72 h-80 lg:w-80 lg:h-96 border-[4px] border-retro-black shadow-brutal bg-white overflow-hidden">
                 <Image
-                  src="/photo.jpg"
+                  src={basePath + "/photo.jpg"}
                   alt="Pruthvi Raj B"
                   fill
                   className="object-cover object-top filter contrast-125 saturate-0 group-hover:saturate-100 transition-all duration-300"
