@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
-const isVercel = process.env.VERCEL === '1';
 const nextConfig = {
   output: 'export',
-  basePath: isVercel ? '' : (process.env.NODE_ENV === 'production' ? '/pruthviraj-portfolio' : ''),
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   images: {
     unoptimized: true,
   },

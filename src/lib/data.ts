@@ -1,5 +1,4 @@
-const isVercel = process.env.NEXT_PUBLIC_VERCEL === '1' || (typeof window !== 'undefined' && window.location.hostname.includes('vercel.app'));
-export const basePath = isVercel ? "" : (process.env.NODE_ENV === "production" ? "/pruthviraj-portfolio" : "");
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export const siteConfig = {
   name: "Pruthvi Raj B",
