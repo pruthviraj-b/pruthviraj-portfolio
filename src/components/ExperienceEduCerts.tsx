@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { motion } from "framer-motion";
 import { experience, certifications, education } from "@/lib/data";
 import { SectionHeader } from "./Skills";
@@ -95,10 +96,12 @@ export function Certifications() {
         />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((c, i) => {
-            const CardWrapper = (props: any) => c.link ? (
-              <a href={c.link} target="_blank" rel="noopener noreferrer" {...props} />
+            const CardWrapper = ({ children }: { children: React.ReactNode }) => c.link ? (
+              <a href={c.link} target="_blank" rel="noopener noreferrer">
+                {children}
+              </a>
             ) : (
-              <div {...props} />
+              <div>{children}</div>
             );
 
             return (

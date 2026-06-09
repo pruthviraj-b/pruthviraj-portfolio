@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: '/pruthviraj-portfolio',
   images: {
-    domains: [],
+    unoptimized: true,
   },
 };
 
 export default nextConfig;
+
